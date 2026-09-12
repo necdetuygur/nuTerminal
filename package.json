@@ -58,5 +58,11 @@
     "@types/vscode": "^1.70.0",
     "@vscode/vsce": "^3.0.0",
     "typescript": "^5.4.5"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "@vscode/vsce-sign",
+      "keytar"
+    ]
   }
 }
