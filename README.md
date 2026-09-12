@@ -62,6 +62,12 @@ pnpm run package
 code --install-extension nuterminal-0.0.1.vsix
 ```
 
+### Total
+
+```bash
+code --uninstall-extension necdetuygur.nuterminal && pnpm run package && code --install-extension nuterminal-0.0.1.vsix
+```
+
 ---
 
 ## Keyboard Shortcut
