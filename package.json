@@ -1,0 +1,62 @@
+{
+  "name": "nuterminal",
+  "displayName": "nuTerminal",
+  "description": "Open a new terminal right in the editor area with a single click from the title bar.",
+  "version": "0.0.1",
+  "license": "MIT",
+  "publisher": "nuterminal",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Other",
+    "Terminal"
+  ],
+  "keywords": [
+    "terminal",
+    "editor",
+    "titlebar",
+    "topbar"
+  ],
+  "activationEvents": [
+    "onCommand:nuterminal.openInEditor"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "nuterminal.openInEditor",
+        "title": "nuTerminal: New Terminal in Editor",
+        "icon": "$(terminal)"
+      }
+    ],
+    "menus": {
+      "titleBar/title": [
+        {
+          "command": "nuterminal.openInEditor",
+          "group": "navigation@99"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "nuterminal.openInEditor",
+        "key": "ctrl+alt+n",
+        "mac": "cmd+alt+n",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@types/vscode": "^1.70.0",
+    "@vscode/vsce": "^3.0.0",
+    "typescript": "^5.4.5"
+  }
+}
