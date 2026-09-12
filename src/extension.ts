@@ -2,7 +2,7 @@ import * as vscode from "vscode";
 
 const COMMAND = "nuterminal.openInEditor";
 const STATUS_BAR_ITEM_ID = "nuterminal.statusItem";
-const STATUS_BAR_PRIORITY = 100;
+const STATUS_BAR_PRIORITY = Number.MIN_SAFE_INTEGER;
 
 function openTerminalInEditor(): void {
   const terminal = vscode.window.createTerminal({
