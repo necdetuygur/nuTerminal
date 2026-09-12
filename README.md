@@ -9,8 +9,8 @@ A minimal VS Code extension that adds a **New Terminal in Editor** button direct
 | Feature | Detail |
 | --- | --- |
 | **Title bar button** | Appears in the top-right title bar next to window controls |
-| **Editor panel terminal** | Opens a terminal as an editor tab (not the bottom panel) |
-| **Reusable** | Reuses the same terminal if already open |
+| **Editor panel terminal** | Opens a terminal as a new editor tab, never a split |
+| **New terminal each click** | Every click spawns a fresh terminal tab |
 | **Keyboard shortcut** | `Ctrl+Alt+N` (`Cmd+Alt+N` on macOS) |
 
 ---
@@ -77,8 +77,8 @@ code --install-extension nuterminal-0.0.1.vsix
 
 1. The extension registers a command `nuterminal.openInEditor` with VS Code.
 2. A `titleBar/title` menu contribution places a terminal icon button in the window title bar.
-3. On click (or keybinding), it calls `vscode.window.createTerminal()` with `TerminalLocation.Editor`, which opens the terminal as a first-class editor tab.
-4. If the terminal is already open, it simply focuses the existing one.
+3. On click (or keybinding), it calls `vscode.window.createTerminal()` with `{ viewColumn: ViewColumn.Active }`, so the terminal opens as a new tab in the active editor group — never as a split view.
+4. Each click creates a brand-new terminal tab.
 
 ---
 
