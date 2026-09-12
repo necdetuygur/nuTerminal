@@ -1,6 +1,6 @@
 {
   "name": "nuterminal-vscode",
-  "displayName": "nuTerminal",
+  "displayName": "nuTerminal VSCode",
   "description": "Open a new terminal in the editor area with a single click from the status bar.",
   "version": "1.0.1",
   "license": "MIT",
