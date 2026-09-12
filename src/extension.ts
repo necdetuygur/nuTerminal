@@ -6,7 +6,7 @@ const STATUS_BAR_PRIORITY = Number.MIN_SAFE_INTEGER;
 
 function openTerminalInEditor(): void {
   const terminal = vscode.window.createTerminal({
-    name: "nuTerminal",
+    name: "Terminal",
     location: { viewColumn: vscode.ViewColumn.Active },
   });
 
