@@ -43,8 +43,7 @@
       {
         "command": "nuterminal.openInEditor",
         "key": "ctrl+alt+n",
-        "mac": "cmd+alt+n",
-        "when": "editorTextFocus"
+        "mac": "cmd+alt+n"
       }
     ]
   },
