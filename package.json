@@ -1,7 +1,7 @@
 {
   "name": "nuterminal",
   "displayName": "nuTerminal",
-  "description": "Open a new terminal right in the editor area with a single click from the title bar.",
+  "description": "Open a new terminal in the editor area with a single click from the status bar.",
   "version": "0.0.1",
   "license": "MIT",
   "publisher": "necdetuygur",
@@ -14,8 +14,7 @@
   "keywords": [
     "terminal",
     "editor",
-    "titlebar",
-    "topbar"
+    "statusbar"
   ],
   "activationEvents": [
     "onCommand:nuterminal.openInEditor"
@@ -30,19 +29,9 @@
     "commands": [
       {
         "command": "nuterminal.openInEditor",
-        "title": "nuTerminal: New Terminal in Editor",
-        "icon": "$(terminal)"
+        "title": "nuTerminal: New Terminal in Editor"
       }
     ],
-    "menus": {
-      "titleBar/title": [
-        {
-          "command": "nuterminal.openInEditor",
-          "icon": "$(terminal)",
-          "group": "navigation@99"
-        }
-      ]
-    },
     "keybindings": [
       {
         "command": "nuterminal.openInEditor",
