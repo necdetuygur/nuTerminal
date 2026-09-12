@@ -53,19 +53,19 @@ pnpm run compile
 
 ```bash
 pnpm run package
-# Produces: nuterminal-0.0.1.vsix
+# Produces: nuterminal-1.0.0.vsix
 ```
 
 ### Install the Packaged Extension
 
 ```bash
-code --install-extension nuterminal-0.0.1.vsix
+code --install-extension nuterminal-1.0.0.vsix
 ```
 
 ### Total
 
 ```bash
-code --uninstall-extension necdetuygur.nuterminal && pnpm run package && code --install-extension nuterminal-0.0.1.vsix
+code --uninstall-extension necdetuygur.nuterminal && pnpm run package && code --install-extension nuterminal-1.0.0.vsix
 ```
 
 ---
