@@ -4,13 +4,12 @@
   "description": "Open a new terminal right in the editor area with a single click from the title bar.",
   "version": "0.0.1",
   "license": "MIT",
-  "publisher": "nuterminal",
+  "publisher": "necdetuygur",
   "engines": {
     "vscode": "^1.70.0"
   },
   "categories": [
-    "Other",
-    "Terminal"
+    "Other"
   ],
   "keywords": [
     "terminal",
@@ -24,8 +23,9 @@
   "main": "./out/extension.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/necdetuygur/nuTerminal.git"
+    "url": "https://github.com/necdetuygur/nuTerminal"
   },
+  "icon": "icon.png",
   "contributes": {
     "commands": [
       {
