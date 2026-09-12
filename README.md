@@ -81,7 +81,7 @@ code --uninstall-extension necdetuygur.nuterminal && pnpm run package && code --
 
 ## How It Works
 
-1. The extension registers a command `nuterminal.openInEditor` and activates eagerly the moment VS Code starts up (via the `*` activation event, with `onStartupFinished` as a fallback).
+1. The extension registers a command `nuterminal.openInEditor` and activates once VS Code finishes starting (`onStartupFinished`), with the command/keybinding (`onCommand`) as an additional trigger.
 2. It creates a status bar item (aligned right) showing the default terminal icon, placed next to the notification bell in the bottom-right corner.
 3. On click (or keybinding), it calls `vscode.window.createTerminal()` with `{ viewColumn: ViewColumn.Active }`, so the terminal opens as a new tab in the active editor group — never as a split view.
 4. Each click creates a brand-new terminal tab.
