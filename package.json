@@ -22,6 +22,10 @@
     "onCommand:nuterminal.openInEditor"
   ],
   "main": "./out/extension.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/necdetuygur/nuTerminal.git"
+  },
   "contributes": {
     "commands": [
       {

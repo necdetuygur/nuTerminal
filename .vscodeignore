@@ -1,0 +1,10 @@
+.vscode/**
+.git/**
+.gitignore
+src/**
+node_modules/**
+**/*.map
+tsconfig.json
+pnpm-lock.yaml
+pnpm-workspace.yaml
+*.vsix
