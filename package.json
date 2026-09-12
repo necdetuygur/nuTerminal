@@ -17,7 +17,7 @@
     "statusbar"
   ],
   "activationEvents": [
-    "onCommand:nuterminal.openInEditor"
+    "onStartupFinished"
   ],
   "main": "./out/extension.js",
   "repository": {
