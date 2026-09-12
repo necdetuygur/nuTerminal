@@ -1,6 +1,6 @@
 # nuTerminal
 
-A minimal VS Code extension that adds a **New Terminal in Editor** button directly to the title bar — right next to the minimize/maximize/close controls. One click opens a fully functional terminal as a tab in the **editor area**, not the bottom panel.
+A minimal VS Code extension that adds a **New Terminal in Editor** button to the status bar — right next to the notification bell in the bottom-right corner. One click opens a fully functional terminal as a tab in the **editor area**, not the bottom panel.
 
 ---
 
@@ -8,7 +8,7 @@ A minimal VS Code extension that adds a **New Terminal in Editor** button direct
 
 | Feature | Detail |
 | --- | --- |
-| **Title bar button** | Appears in the top-right title bar next to window controls |
+| **Status bar button** | Appears in the bottom-right status bar, next to the notification bell |
 | **Editor panel terminal** | Opens a terminal as a new editor tab, never a split |
 | **New terminal each click** | Every click spawns a fresh terminal tab |
 | **Keyboard shortcut** | `Ctrl+Alt+N` (`Cmd+Alt+N` on macOS) |
@@ -41,7 +41,7 @@ pnpm run watch
 # Then press F5 inside VS Code
 ```
 
-A new VS Code window (**Extension Development Host**) will open with the extension active. Click the terminal icon in the title bar or press `Ctrl+Alt+N` to launch a terminal in the editor area.
+A new VS Code window (**Extension Development Host**) will open with the extension active. Click the terminal icon next to the notification bell in the bottom-right status bar or press `Ctrl+Alt+N` to launch a terminal in the editor area.
 
 ### Build for Production
 
@@ -76,7 +76,7 @@ code --install-extension nuterminal-0.0.1.vsix
 ## How It Works
 
 1. The extension registers a command `nuterminal.openInEditor` with VS Code.
-2. A `titleBar/title` menu contribution places a terminal icon button in the window title bar.
+2. On activation it creates a status bar item (aligned right) showing the default terminal icon, placed next to the notification bell in the bottom-right corner.
 3. On click (or keybinding), it calls `vscode.window.createTerminal()` with `{ viewColumn: ViewColumn.Active }`, so the terminal opens as a new tab in the active editor group — never as a split view.
 4. Each click creates a brand-new terminal tab.
 
