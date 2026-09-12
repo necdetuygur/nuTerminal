@@ -17,6 +17,7 @@
     "statusbar"
   ],
   "activationEvents": [
+    "*",
     "onStartupFinished"
   ],
   "main": "./out/extension.js",
