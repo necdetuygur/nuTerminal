@@ -2,17 +2,13 @@ import * as vscode from "vscode";
 
 const COMMAND = "nuterminal.openInEditor";
 
-let instance: vscode.Terminal | undefined;
-
 function openTerminalInEditor(): void {
-  if (!instance || instance.exitStatus !== undefined) {
-    instance = vscode.window.createTerminal({
-      name: "nuTerminal",
-      location: vscode.TerminalLocation.Editor,
-    });
-  }
+  const terminal = vscode.window.createTerminal({
+    name: "nuTerminal",
+    location: { viewColumn: vscode.ViewColumn.Active },
+  });
 
-  instance.show(true);
+  terminal.show();
 }
 
 export function activate(context: vscode.ExtensionContext): void {
